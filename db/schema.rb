@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 4) do
 
-  create_table "costume_stores", force: :cascade do |t|
-    t.string "name"
-    t.string "location"
-    t.integer "costume_inventory"
-    t.integer "num_of_employees"
-    t.boolean "open_status"
-    t.string "opening_time"
-    t.string "closing_time"
-  end
+# Could not dump table "costume_stores" because of following StandardError
+#   Unknown type 'still_in_business' for column 'open_status'
 
   create_table "costumes", force: :cascade do |t|
     t.string "name"
